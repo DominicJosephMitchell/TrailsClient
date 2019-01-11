@@ -5,16 +5,13 @@ USER STORIES:
 RIDER:
 A rider wants to know how many total miles of the trail.
 A rider wants to know the location of each trail.
-A rider wants to know how difficult the ride is.
-A rider wants to know what feature each ride has.
-A rider wants to know how many streets would have to crossed over during the ride.
-A rider wants to know the elevation of their hike.
+A rider wants to know how difficult the trail is.
+A rider wants to know what feature each trail has.
+A rider wants to know the elevation of their trail.
 
 USER:
-A user wants to have a easy to use of program.
 A user wants to be able to see pictures of the trails.
 A user wants to be able to see trails they have completed.
-A user wants a appealing UI/UX design .
 A user wants to create an account, with user name and password.
 A user wants to update their password.
 A user wants to sign in and log out.
@@ -22,12 +19,18 @@ A user wants to get all trails.
 A user wants to get only trails they have completed.
 A user wants to see information on all the trails listed.
 
+STRETCH GOALS:
+A rider wants to know how difficult the ride is.
+A rider wants to know what feature each ride has.
+A rider wants to know how many streets would have to crossed over during the ride.
+
 WIREFRAMES:
 
 A wireframe is a layout of a web page that demonstrates what interface elements will exist on key pages. It is a critical part of the interaction design process. ... Wireframes can also be used to create the global and secondary navigation to ensure the terminology and structure used for the site meets user expectations.
 
 Wireframes focus on:
-
+* To have a easy to use of program.
+* Create a appealing UI/UX design .
 * The range of functions available
 * The relative priorities of the information and functions
 * The rules for displaying certain kinds of information
