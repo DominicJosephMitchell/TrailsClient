@@ -1,7 +1,66 @@
 README
 
+USER STORIES:
 
+RIDER:
+A rider wants to know how many total miles of the trail.
+A rider wants to know the location of each trail.
+A rider wants to know how difficult the ride is.
+A rider wants to know what feature each ride has.
+A rider wants to know how many streets would have to crossed over during the ride.
+A rider wants to know the elevation of their hike.
 
+USER:
+A user wants to have a easy to use of program.
+A user wants to be able to see pictures of the trails.
+A user wants to be able to see trails they have completed.
+A user wants a appealing UI/UX design .
+A user wants to create an account, with user name and password.
+A user wants to update their password.
+A user wants to sign in and log out.
+A user wants to get all trails.
+A user wants to get only trails they have completed.
+A user wants to see information on all the trails listed.
+
+WIREFRAMES:
+
+A wireframe is a layout of a web page that demonstrates what interface elements will exist on key pages. It is a critical part of the interaction design process. ... Wireframes can also be used to create the global and secondary navigation to ensure the terminology and structure used for the site meets user expectations.
+
+Wireframes focus on:
+
+* The range of functions available
+* The relative priorities of the information and functions
+* The rules for displaying certain kinds of information
+* The effect of different scenarios on the display.
+
+Entity Relationship Diagrams (ERD)
+
+An entity-relationship diagram (ERD) is a data modeling technique that graphically illustrates an information system's entities and the relationships between those entities. An ERD is a conceptual and representational model of data used to represent the entity framework infrastructure. ... Entities. Relationships
+* Identify the entities. The first step in making an ERD is to identify all of the entities you will use. ...
+* Identify relationships. Look at two entities, are they related? ...
+* Describe the relationship. How are the entities related? ...
+* Add attributes. ...
+* Complete the diagram.
+
+Catalog of Routes:
+Authentication
+Verb	URI Pattern	Controller#Action
+POST	/sign-up	users#signup
+POST	/sign-in	users#signin
+PATCH	/change-password/	users#changepw
+DELETE	/sign-out/	users#signout
+GET	/users/:id	users#show
+Trails
+Verb	URI Pattern	Controller#Action
+GET	/trails	Trails#index
+GET	/trails/:id	Trails#show
+CompletedTrails
+Verb	URI Pattern	Controller#Action
+POST	/completed_trails	CompletedTrails#create
+GET	/completed_trails	CompletedTrails#index
+GET	/completed_trails/:id	CompletedSummits#show
+PATCH	/completed_trails/:id	CompletedTrails#update
+DELETE	/completed_trails/:id	CompletedTrails#destroy
 
 
 
