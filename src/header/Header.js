@@ -21,15 +21,18 @@ const unauthenticatedOptions = (
 
 const alwaysOptions = (
   <React.Fragment>
-    <Link to="/">Main Page</Link>
+    <Link to="/"><img
+      src={require('./bikerBlackIsolated.jpg')}
+      className='logo' />
+    </Link>
   </React.Fragment>
 )
 
 const Header = ({ user }) => (
   <header className="main-header">
-    <h1>TRAILS</h1>
+    <h1>Bicycle Trails of Southern New England</h1>
     <nav>
-      { user && <span>Welcome, {user.email}</span>}
+      { user && <span>Aloha !, {user.email}</span>}
       { user ? authenticatedOptions : unauthenticatedOptions }
       { alwaysOptions }
     </nav>
