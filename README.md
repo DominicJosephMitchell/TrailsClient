@@ -1,3 +1,5 @@
+Run in Terminal:  npm start
+
 README
 
 USER STORIES:

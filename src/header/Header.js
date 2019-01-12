@@ -22,7 +22,7 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
   <React.Fragment>
     <Link to="/"><img
-      src={require('./bikerBlackIsolated.jpg')}
+      src={require('./bikerBlackIsolated1.jpg')}
       className='logo' />
     </Link>
   </React.Fragment>
