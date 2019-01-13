@@ -1,3 +1,15 @@
+sudo update-rc.d -f postgresql remove
+and
+sudo vim /etc/postgresql/9.5/main/start.conf
+
+echo manual | sudo tee /etc/init/postgresql.override
+and
+
+sudo systemctl disable postgresql.service
+and
+
+sudo systemctl disable postgresql
+
 Run in Terminal:  npm start
 
 README
