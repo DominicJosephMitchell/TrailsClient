@@ -1,7 +1,7 @@
 $success: rgba(0,0,0,0.1);
 $warning: rgba(0,0,0,0.1);
 $error: rgba(0,0,0,0.1);
-$charcoal: rgba(0,0,0,0.4);
+$charcoal: rgba(0,0,0,0.1);
 
 .flash-success,
 .flash-warning,
@@ -15,8 +15,8 @@ $charcoal: rgba(0,0,0,0.4);
   top: 35%;
   width: 50%;
   z-index: 1;
+  color:orangered;
   border-radius: 100%;
-  color: lightblue;
 }
 
 .flash-success {
@@ -43,7 +43,7 @@ $charcoal: rgba(0,0,0,0.4);
   h3,
   input {
     margin-bottom: 5%;
-    color: blue;
+    color: lightblue;
   }
 
   button {

@@ -5,6 +5,8 @@ import { handleErrors, changePassword } from '../api'
 import messages from '../messages'
 import apiUrl from '../../apiConfig'
 
+import './ChangePassword.scss'
+
 class ChangePassword extends Component {
   constructor () {
     super()

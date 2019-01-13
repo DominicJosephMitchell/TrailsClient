@@ -6,15 +6,16 @@ $charcoal: #ccc;
   height: 250px;
   padding: 0 20px;
   font-family: 'Thasadith', sans-serif;
-  color: orangered;
+  color: lightblue;
   font-weight: bolder;
-
 
   a,
   span {
     font-size: 1.2em;
     margin: 0 15px;
-    color: blue;
+    color: midnightblue;
+    font-weight: bolder;
+
   }
 }
 
@@ -32,10 +33,11 @@ $charcoal: #ccc;
     font-size: .7em;
     height: auto;
     padding: 10px;
-    
+    font-weight: bolder;
 
     h1 {
-      font-size: 2.5em;
+      font-size: 4em;
+      font-weight: bolder;
     }
   }
 }

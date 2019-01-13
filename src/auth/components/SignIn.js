@@ -5,8 +5,10 @@ import { signIn } from '../api'
 import messages from '../messages'
 import apiUrl from '../../apiConfig'
 
+import './SignIn.scss'
+
 class SignIn extends Component {
-  constructor () {
+  constructor() {
     super()
 
     this.state = {
@@ -34,32 +36,38 @@ class SignIn extends Component {
       .catch(() => flash(messages.signInFailure, 'flash-error'))
   }
 
-  render () {
+  render() {
     const { email, password } = this.state
 
     return (
-      <form className='auth-form' onSubmit={this.signIn}>
-        <h3>Sign In</h3>
-        <label htmlFor="email">Email</label>
-        <input
-          required
-          type="email"
-          name="email"
-          value={email}
-          placeholder="Email"
-          onChange={this.handleChange}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          required
-          name="password"
-          value={password}
-          type="password"
-          placeholder="Password"
-          onChange={this.handleChange}
-        />
-        <button type="submit">Sign In</button>
-      </form>
+      <div className="sign-in-container">
+        <div className="sign-in-header">
+          {/* <h1>Let's Get Some Exercise</h1> */}
+          <h4>The Journey Begins!</h4>
+        </div>
+        <form className='auth-form' onSubmit={this.signIn}>
+          <h3>Sign In</h3>
+          <label htmlFor="email">Email</label>
+          <input
+            required
+            type="email"
+            name="email"
+            value={email}
+            placeholder="Email"
+            onChange={this.handleChange}
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            required
+            name="password"
+            value={password}
+            type="password"
+            placeholder="Password"
+            onChange={this.handleChange}
+          />
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
     )
   }
 }

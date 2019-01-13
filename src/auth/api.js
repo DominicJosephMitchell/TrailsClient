@@ -66,3 +66,46 @@ export const changePassword = (passwords, user) => {
     })
   })
 }
+
+export const deleteTrailsFinished = (user, id) => {
+  return fetch(apiUrl + '/trails_finished/' + id, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Token token=${user.token}`
+    }
+  })
+}
+
+export const createTrailsFinished = (user, trailId) => {
+  return fetch(apiUrl + '/completed_summits', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Token token=${user.token}`
+    },
+    body: JSON.stringify({
+      trails_finished: {
+        user_id: user.id,
+        trail_id: trailId,
+        notes: ''
+      }
+    })
+  })
+}
+
+export const trails = credentials => {
+  return fetch(apiUrl + '/trails', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      credentials: {
+        email: credentials.email,
+        password: credentials.password,
+        password_confirmation: credentials.passwordConfirmation
+      }
+    })
+  })
+}
