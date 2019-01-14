@@ -1,67 +1,55 @@
-// import React, { Component } from 'react'
-// import { withRouter } from 'react-router-dom'
+import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 
-// import { viewTrails } from '../api'
-// import messages from '../messages'
-// import apiUrl from '../../apiConfig'
+import { viewTrails } from '../api'
+import messages from '../messages'
+import apiUrl from '../../apiConfig'
 
-// import './ViewTrails.scss'
+import './ViewTrails.scss'
 
-// const ViewTrails = ({ user }) => (
-//   <header className="main-header">
-//     <h1>Bicycle Trails of Southern New England</h1>
-//     <nav>
-//       {user && <span>Aloha !, {user.email}</span>}
-//       {user ? authenticatedOptions : unauthenticatedOptions}
-//       {alwaysOptions}
-//     </nav>
-//   </header>
-// )
+class ViewTrails extends Component {
+  constructor(props) {
+    super(props)
+    const { flash, history, setUser, cards } = this.props
+    this.state = {
+      trails: null
+    }
+  }
 
-// const alwaysOptions = (
-//   <React.Fragment>
-//     <Link to="/"><img
-//       src={require('./bikerBlackIsolated1.jpg')}
-//       className='logo' />
-//     </Link>
-//   </React.Fragment>
-// )
+  handleChange = event => this.setState({
+    [event.target.name]: event.target.value
+  })
 
-// class ViewTrails extends Component {
-//   constructor() {
-//     super()
-//     const { flash, history, setUser } = this.props
+  viewTrails = event => {
+    event.preventDefault()
 
+    const { card } = this.state
 
-//     this.state = {
-//     <Card>
-//     <ImageHeader imageSrc="http://via.placeholder.com/600x250" />
-//     <CardHeader>Header</CardHeader>
-//     <CardBody>Body</CardBody>
-//     <CardFooter>Footer</CardFooter>
-//     </Card> 
-//     }
-//   }
+    viewTrails(this.state)
+      .then(res => res.ok ? res : new Error())
+      .then(res => res.json())
+      .then(res => setUser(res.user))
+      .then(() => flash(messages.trailInSuccess, 'flash-success'))
+      .then(() => history.push('/'))
+      .catch(() => flash(messages.trailInFailure, 'flash-error'))
+  }
 
-//     handleChange = event => this.setState({
-//       [event.target.name]: event.target.value
-//     })
+  render() {
+    const { card } = this.state
+    return (
+      <div className="view-trails-container">
+        <div className="view-trails-header">
+          <legend>Greenwood Trail</legend>
+        </div>
+        <form className='auth-form' onSubmit={this.Map}>
+          <button type="submit">Map</button>
+        </form>
+        <form className='auth-form' onSubmit={this.Information}>
+          <button type="submit" >Information</button>
+        </form>
+      </div >
+    )
+  }
+}
 
-//     viewTrails = event => {
-//       event.preventDefault()
-
-//     return ()
-//     <div className="sign-up-container">
-//         <div className="sign-up-header">
-//             <h4>Yahoo !</h4>
-//         </div>
-//     </div>
-//     <h3>Greenwodd Trail</h3>
-//     placeholder = "Email"
-//     <button type="submit" >Information</button >
-//     <button type="submit">Map</button>
-//     }
-// }
-
-
-// export default withRouter(ViewTrails)
+export default withRouter(ViewTrails)

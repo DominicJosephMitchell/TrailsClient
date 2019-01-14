@@ -57,7 +57,7 @@ class App extends Component {
             <ChangePassword flash={this.flash} user={user} />
           )} />
           <Route path='/view-trails' render={() => (
-            <ViewTrails flash={this.flash} setUser={this.setUser} />
+            <ViewTrails flash={this.flash} user={user} />
           )} />
 
 

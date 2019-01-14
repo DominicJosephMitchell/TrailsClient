@@ -1,9 +1,20 @@
 @import './SignUpcolor.scss';
 
-.list {
-  font-size: 18px;
-  text-align: left;
-}
+  h3,
+  input {
+    border-radius: 15px;
+    margin-bottom: 5%;
+    padding: 2%;
+    font-family: 'Thasadith', sans-serif;
+  }
+
+  button {
+  font-family: 'Thasadith', sans-serif;
+    align-self: center;
+    max-width: 200px;
+    background-color: $charcoal;
+    color: orange;
+  }
 
 .sign-up-container {
   background-image: url("./SignUp.jpg");
@@ -42,19 +53,3 @@
   width: 30%;
   font-family: 'Thasadith', sans-serif;
 }
-
-  h3,
-  input {
-    border-radius: 15px;
-    margin-bottom: 5%;
-    padding: 2%;
-    font-family: 'Thasadith', sans-serif;
-  }
-
-  button {
-  font-family: 'Thasadith', sans-serif;
-    align-self: center;
-    max-width: 200px;
-    background-color: $charcoal;
-    color: orange;
-  }

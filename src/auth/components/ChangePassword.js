@@ -8,7 +8,7 @@ import apiUrl from '../../apiConfig'
 import './ChangePassword.scss'
 
 class ChangePassword extends Component {
-  constructor () {
+  constructor() {
     super()
 
     this.state = {
@@ -35,33 +35,38 @@ class ChangePassword extends Component {
       .catch(() => flash(messages.changePasswordFailure, 'flash-error'))
   }
 
-  render () {
+  render() {
     const { oldPassword, newPassword } = this.state
 
     return (
-      <form className='auth-form' onSubmit={this.changePassword}>
-        <h3>Change Password</h3>
+      < div className="change-password-container" >
+        <div className="change-password-header">
+        </div>
 
-        <label htmlFor="oldpw">Old Password</label>
-        <input
-          required
-          name="oldPassword"
-          value={oldPassword}
-          type="password"
-          placeholder="Old Password"
-          onChange={this.handleChange}
-        />
-        <label htmlFor="newPassword">New Password</label>
-        <input
-          required
-          name="newPassword"
-          value={newPassword}
-          type="password"
-          placeholder="New Password"
-          onChange={this.handleChange}
-        />
-        <button type="submit">Change Password</button>
-      </form>
+        <form className='auth-form' onSubmit={this.changePassword}>
+          <h3>Change Password</h3>
+
+          <label htmlFor="oldpw">Old Password</label>
+          <input
+            required
+            name="oldPassword"
+            value={oldPassword}
+            type="password"
+            placeholder="Old Password"
+            onChange={this.handleChange}
+          />
+          <label htmlFor="newPassword">New Password</label>
+          <input
+            required
+            name="newPassword"
+            value={newPassword}
+            type="password"
+            placeholder="New Password"
+            onChange={this.handleChange}
+          />
+          <button type="submit">Change Password</button>
+        </form>
+      </div >
     )
   }
 }

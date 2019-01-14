@@ -42,7 +42,6 @@ class SignIn extends Component {
     return (
       <div className="sign-in-container">
         <div className="sign-in-header">
-          {/* <h1>Let's Get Some Exercise</h1> */}
           <h4>The Journey Begins!</h4>
         </div>
         <form className='auth-form' onSubmit={this.signIn}>

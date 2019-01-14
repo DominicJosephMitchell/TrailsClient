@@ -45,7 +45,6 @@ class SignUp extends Component {
     return (
       <div className="sign-up-container">
         <div className="sign-up-header">
-          {/* <h1>Let's Get Some Exercise</h1> */}
           <h4>We Are Glad You Have Arrived !</h4>
         </div>
 
