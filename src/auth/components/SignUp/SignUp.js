@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { handleErrors, signUp, signIn } from '../api'
-import messages from '../messages'
-import apiUrl from '../../apiConfig'
+import { handleErrors, signUp, signIn } from '../../api'
+import messages from '../../messages'
+import apiUrl from '../../../apiConfig'
 
 import './SignUp.scss'
 

@@ -25,6 +25,7 @@ const alwaysOptions = (
       src={require('./bikerBlackIsolated1.jpg')}
       className='logo' />
     </Link>
+    <Link to="/">Home</Link>
   </React.Fragment>
 )
 

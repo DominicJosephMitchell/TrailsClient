@@ -10,6 +10,8 @@ export const handleErrors = res => {
   }
 }
 
+// TRAILS ACCOUNT CREDENTIALS
+
 export const signUp = credentials => {
   return fetch(apiUrl + '/sign-up', {
     method: 'POST',
@@ -67,28 +69,47 @@ export const changePassword = (passwords, user) => {
   })
 }
 
-// ***************************************************
-// ***************************************************
-// TRAILS:
+export const viewTrails = (user, id) => {
+  return fetch(apiUrl + '/view_trails', {
+    method: 'GET',
+    headers: {
+      'Authorization': `Token token=${user.token}`
+    },
+  })
+}
 
-export const trails = (user, id) => {
-  return fetch(apiUrl + '/trails/' + id, {
+// ***************************************************
+// ***************************************************
+// TRAILS: CRUD
+
+export const trailsCreate = credentials => {
+  return fetch(apiUrl + '/trails-create', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      trails: {
-        user_id: user.id,
-        trail_id: trailId,
+      credentials: {
+        email: credentials.email,
+        password: credentials.password,
+        password_confirmation: credentials.passwordConfirmation
       }
     })
   })
 }
 
-export const createFinishedTrails = (user, id) => {
-  return fetch(apiUrl + '/finished_trails', {
-    method: 'POST',
+export const trailsRead = (user, id) => {
+  return fetch(apiUrl + '/trails_read', {
+    method: 'GET',
+    headers: {
+      'Authorization': `Token token=${user.token}`
+    },
+  })
+}
+
+export const trailsUpdate = (user, id) => {
+  return fetch(apiUrl + '/trails_update/', {
+    method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Token token=${user.token}`
@@ -96,8 +117,8 @@ export const createFinishedTrails = (user, id) => {
   })
 }
 
-export const deleteFinishedTrails = (user, id) => {
-  return fetch(apiUrl + '/finished_trails', {
+export const trailsDelete = (user, id) => {
+  return fetch(apiUrl + '/trails-delete', {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -106,55 +127,14 @@ export const deleteFinishedTrails = (user, id) => {
   })
 }
 
-export const showFinishedTrails = (user, id) => {
-  return fetch(apiUrl + '/finished_trails', {
+const trailsIndex = () => {
+  return fetch(apiUrl + '/trails-index', {
     method: 'GET',
-    headers: {
-      'Authorization': `Token token=${user.token}`
-    },
-  })
-}
-
-export const indexFinishedTrails = (user) => {
-  return fetch(apiUrl + '/finished_trails/', {
-    method: 'GET',
-    headers: {
-      'Authorization': `Token token=${user.token}`
-    },
-  })
-}
-
-export const indexTrails = (user, id) => {
-  return fetch(apiUrl + `trails/${id}`, {
-    method: 'GET',
-    headers: {
-      'Authorization': `Token token=${user.token}`
-    },
-  })
-}
-
-export const showTrails = (user, id) => {
-  return fetch(apiUrl + `/trails/${id}`, {
-    method: 'GET',
-    headers: {
-      'Authorization': `Token token=${user.token}`
-    },
-  })
-}
-
-export const viewTrails = (user, id) => {
-  return fetch(apiUrl + '/view-trails/' + id, {
-    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Token token=${user.token}`
     },
-    body: JSON.stringify({
-      view_trails: {
-        user_id: user.id,
-        trail_id: trailId,
-      }
-    })
   })
 }
 
+// ********************************************

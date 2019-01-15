@@ -4,12 +4,18 @@ import { Route, Link } from 'react-router-dom'
 
 import AuthenticatedRoute from './auth/components/AuthenticatedRoute'
 import Header from './header/Header'
-import SignUp from './auth/components/SignUp'
-import SignIn from './auth/components/SignIn'
-import SignOut from './auth/components/SignOut'
-import ChangePassword from './auth/components/ChangePassword'
-import ViewTrails from './auth/components/ViewTrails'
+import SignUp from './auth/components/SignUp/SignUp'
+import SignIn from './auth/components/SignIn/SignIn'
+import SignOut from './auth/components/SignOut/SignOut'
+import ChangePassword from './auth/components/ChangePassword/ChangePassword'
+import ViewTrails from './auth/components/ViewTrails/ViewTrails'
+// import Trails from './auth/components/Trails'
 
+import Create from './auth/components/CrudComponents/CreateComponent'
+import Read from './auth/components/CrudComponents/ReadComponent'
+import Update from './auth/components/CrudComponents/UpdateComponent'
+import Delete from './auth/components/CrudComponents/DeleteComponent'
+import Index from './auth/components/CrudComponents/IndexComponent'
 
 class App extends Component {
   constructor () {

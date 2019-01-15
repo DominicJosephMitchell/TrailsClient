@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { viewTrails } from '../api'
-import messages from '../messages'
-import apiUrl from '../../apiConfig'
+import { viewTrails } from '../../api'
+import messages from '../../messages'
+import apiUrl from '../../../apiConfig'
 
 import './ViewTrails.scss'
 
@@ -47,6 +47,10 @@ class ViewTrails extends Component {
         <form className='auth-form' onSubmit={this.Information}>
           <button type="submit" >Information</button>
         </form>
+        <form className='auth-form' onSubmit={this.CompletedTrail}>
+          <button type="submit" >Click if Finished Trail</button>
+        </form>
+
       </div >
     )
   }
