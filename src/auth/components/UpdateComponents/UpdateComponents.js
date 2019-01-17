@@ -59,40 +59,17 @@ class TrailsUpdate extends Component {
   handleFormSubmit = event => {
     event.preventDefault()
     const data = { ...this.state }
+
     patchTrail(data, this.props.user)
       .then(res => res.ok ? res : new Error())
       .then(() => this.props.flash('Updated that Trail, Good Job', 'flash-success'))
       .then(this.clearForm)
+      .then(this.props.getAllTrails)
       .catch(() => console.error('oh no got an error'))
-    // PatchTrail(data, this.props.user)
-    //   .then(() => this.props.flash('Updated that Trail, Good Job', 'flash-success'))
-    //   .then(this.clearForm)
-    //   .then(this.props.getAllTrails)
-    //   .catch(() => console.error('oh no got an error'))
   }
-
-  // handleChange = event => this.setState({
-  //   [event.target.name]: event.target.value
-  // })
-
-  // trailsUpdate = event => {
-  //   event.preventDefault()
-
-  //   const { user, token } = this.state
-  //   const { flash, history, setUser } = this.props
-
-  //   trailsUpdate(this.state)
-  //     // .then(handleErrors)
-  //     .then(res => res.ok ? res : new Error())
-  //     .then(res => res.json())
-  //     .then(res => setUser(res.user))
-  //     .then(() => flash(messages.signInSuccess, 'flash-success'))
-  //     .then(() => history.push('/'))
-  //     .catch(() => flash(messages.signInFailure, 'flash-error'))
-  // }
-
   render() {
-    const { user, token } = this.state
+    // console.log(map)
+
     const SelectOptions = this.props.trails.map((trail, index) => {
       return <option key={index} value={trail.id}>{trail.path} (ID: {trail.id})</option>
     })
@@ -131,26 +108,6 @@ class TrailsUpdate extends Component {
         <button type="submit">Update Trail</button>
 
       </form>
-      // <form className='auth-form' onSubmit={this.updateRead}>
-      //   <h3>Update Trails</h3>
-      //   <div className="form-group">
-      //     {/* <label>Update Trail Name:  </label> */}
-      //     <input type="text" className="trail" placeholder="Update Trails Name"/>
-      //   </div>
-      //   <div className="form-group">
-      //     {/* <label>Update Town Name: </label> */}
-      //     <input type="text" className="town" placeholder="Update Town Name"/>
-      //   </div>
-      //   <div className="form-group">
-      //     {/* <label>Update State Name: </label> */}
-      //     <input type="text" className="state" placeholder="Update State Name" />
-      //   </div>
-      //   <div className="form-group">
-      //     <input type="submit" value="Update" className="btn btn-warning" />
-      //   </div>
-      //   {/* <button type="submit">Update</button> */}
-      // </form>
-      // </div>
     )
   }
 }

@@ -22,9 +22,9 @@ const TrailsIndex = props => {
         <h5><b>town</b>: {trail.town}</h5>
         <h5><b>state</b>: {trail.state}</h5>
         <div className="row">
-          {/*<Link to="/trail-update" className="btn btn-warning mx-3">
+          {/* <Link to="/trails-update" className="btn btn-warning mx-3">
             Update
-          </Link>*/}
+          </Link> */}
           <button onClick={deleteTrail} type="submit" className="btn btn-danger">
             Delete
           </button>

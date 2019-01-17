@@ -36,11 +36,13 @@ class TrailsCreate extends Component {
     
     trailsCreate(this.state, user)
       // .then(handleErrors)
+      .then(() => signIn(this.state))
+      // .then(handleErrors)
       .then(res => res.ok ? res : new Error())
       .then(res => res.json())
       .then(res => setUser(res.user))
       .then(() => flash(messages.signInSuccess, 'flash-success'))
-      // .then(() => history.push('/'))
+      .then(() => history.push('/'))
       .catch(() => flash(messages.signInFailure, 'flash-error'))
   }
 
