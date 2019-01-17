@@ -3,9 +3,9 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { trailsCreate } from '../../../api'
-import messages from '../../../messages'
-import apiUrl from '../../../../apiConfig'
+import { trailsCreate } from '../../api'
+import messages from '../../messages'
+import apiUrl from '../../../apiConfig'
 
 import './CreateComponents.scss'
 

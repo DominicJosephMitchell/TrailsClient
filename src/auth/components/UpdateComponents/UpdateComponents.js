@@ -2,9 +2,10 @@
 
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import messages from '../../../messages'
-import apiUrl from '../../../../apiConfig'
-import { trailsUpdate } from '../../../api'
+
+import { trailsUpdate } from '../../api'
+import messages from '../../messages'
+import apiUrl from '../../../apiConfig'
 
 // import './Update.scss'
 

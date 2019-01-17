@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import { signIn } from '../../api'
 import messages from '../../messages'
 import apiUrl from '../../../apiConfig'
-import Button from '@material-ui/core/Button'
+
 import './SignIn.scss'
 
 class SignIn extends Component {
@@ -64,7 +64,7 @@ class SignIn extends Component {
             placeholder="Password"
             onChange={this.handleChange}
           />
-          <Button variant="contained" type="sumbit" className="button">Change Password</Button>
+          <button type="submit">Change Password</button>
         </form>
       </div>
     )

@@ -3,9 +3,9 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { trailsDelete } from '../../../api'
-import messages from '../../../messages'
-import apiUrl from '../../../../apiConfig'
+import { trailsDelete } from '../../api'
+import messages from '../../messages'
+import apiUrl from '../../../apiConfig'
 
 import './DeleteComponents.scss'
 

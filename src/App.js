@@ -11,11 +11,11 @@ import ChangePassword from './auth/components/ChangePassword/ChangePassword'
 // import ViewTrails from './auth/components/ViewTrails/ViewTrails'
 // import Trails from './auth/components/Trails'
 // import CrudComponents from './auth/components/CrudComponents/CrudComponents'
-import TrailsCreate from './auth/components/CreateComponents'
-import TrailsRead from './auth/components/ReadComponents'
-import TrailsUpdate from './auth/components/UpdateComponents'
-import TrailsDelete from './auth/components/DeleteComponents'
-import TrailsIndex from './auth/components/IndexComponents'
+import TrailsCreate from './auth/components/CreateComponents/CreateComponents'
+import TrailsRead from './auth/components/ReadComponents/ReadComponents'
+import TrailsUpdate from './auth/components/UpdateComponents/UpdateComponents'
+import TrailsDelete from './auth/components/DeleteComponents/DeleteComponents'
+import TrailsIndex from './auth/components/IndexComponents/IndexComponents'
 
 class App extends Component {
   constructor () {
@@ -48,8 +48,8 @@ class App extends Component {
       <React.Fragment>
         <Header user={user} />
         {flashMessage && <h3 className={flashType}>{flashMessage}</h3>}
-        <CrudComponents user={user} />
-        {flashMessage && <h3 className={flashType}>{flashMessage}</h3>}
+        {/* <CrudComponents user={user} />
+        {flashMessage && <h3 className={flashType}>{flashMessage}</h3>} */}
        
         <main className="container">
           <Route path='/sign-up' render={() => (
@@ -75,7 +75,7 @@ class App extends Component {
           {/* <Route user={user} path='/crud-components' render={() => (
             <CrudComponents flash={this.flash} user={user} />
           )} /> */}
-          <Route user={user} path='/crud-components' render={() => (
+          <Route user={user} path='/create-components' render={() => (
             <TrailsCreate flash={this.flash} user={user} />
           )} />
           <Route path='/crud-components' render={() => (
