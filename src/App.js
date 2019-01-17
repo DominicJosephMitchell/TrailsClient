@@ -8,14 +8,14 @@ import SignUp from './auth/components/SignUp/SignUp'
 import SignIn from './auth/components/SignIn/SignIn'
 import SignOut from './auth/components/SignOut/SignOut'
 import ChangePassword from './auth/components/ChangePassword/ChangePassword'
-import ViewTrails from './auth/components/ViewTrails/ViewTrails'
+// import ViewTrails from './auth/components/ViewTrails/ViewTrails'
 // import Trails from './auth/components/Trails'
-
-import Create from './auth/components/CrudComponents/CreateComponent'
-import Read from './auth/components/CrudComponents/ReadComponent'
-import Update from './auth/components/CrudComponents/UpdateComponent'
-import Delete from './auth/components/CrudComponents/DeleteComponent'
-import Index from './auth/components/CrudComponents/IndexComponent'
+// import CrudComponents from './auth/components/CrudComponents/CrudComponents'
+import TrailsCreate from './auth/components/CreateComponents'
+import TrailsRead from './auth/components/ReadComponents'
+import TrailsUpdate from './auth/components/UpdateComponents'
+import TrailsDelete from './auth/components/DeleteComponents'
+import TrailsIndex from './auth/components/IndexComponents'
 
 class App extends Component {
   constructor () {
@@ -48,7 +48,9 @@ class App extends Component {
       <React.Fragment>
         <Header user={user} />
         {flashMessage && <h3 className={flashType}>{flashMessage}</h3>}
-        
+        <CrudComponents user={user} />
+        {flashMessage && <h3 className={flashType}>{flashMessage}</h3>}
+       
         <main className="container">
           <Route path='/sign-up' render={() => (
             <SignUp flash={this.flash} setUser={this.setUser} />
@@ -62,29 +64,33 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword flash={this.flash} user={user} />
           )} />
-          <Route path='/view-trails' render={() => (
+          {/* <Route path='/view-trails' render={() => (
             <ViewTrails flash={this.flash} user={user} />
-          )} />
-
-
-
-
-          {/* <AuthenticatedRoute user={user} path='/trails' render={() => (
-            <Trails flash={this.flash} user={user} />
           )} /> */}
-
-
-          {/* <AuthenticatedRoute user={user} exact path='/trails/:id/show-trails-finished' render={(props) => (
-            <ShowTrail flash={this.flash} user={user} id={props.match.params.id} />
-          )} />
-          <AuthenticatedRoute user={user} exact path='/trails-finished' render={() => (
-            <TrailsFinished flash={this.flash} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} exact path='/trails' render={() => (
-            <IndexTrails flash={this.flash} user={user} />
+          {/* <Route path='/trails-finished' render={() => (
+            <ViewTrails flash={this.flash} user={user} />
           )} /> */}
-
-
+          
+          {/* CRUD */}
+          {/* <Route user={user} path='/crud-components' render={() => (
+            <CrudComponents flash={this.flash} user={user} />
+          )} /> */}
+          <Route user={user} path='/crud-components' render={() => (
+            <TrailsCreate flash={this.flash} user={user} />
+          )} />
+          <Route path='/crud-components' render={() => (
+            <TrailsDelete flash={this.flash} user={user} />
+          )} />
+          <Route path='/crud-components' render={() => (
+            <TrailsIndex flash={this.flash} user={user} />
+          )} />
+          <Route path='/crud-components' render={() => (
+            <TrailsRead flash={this.flash} user={user} />
+          )} />
+          <Route path='/crud-components' render={() => (
+            <TrailsUpdate flash={this.flash} user={user} />
+          )} />
+          
         </main>
       </React.Fragment>
     )
@@ -92,3 +98,5 @@ class App extends Component {
 }
 
 export default App
+
+

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
-import { handleErrors, changePassword } from '../../api'
-import messages from '../../messages'
-import apiUrl from '../../../apiConfig'
+import { handleErrors, changePassword } from '../../../App'
+import messages from '../../../messages'
+import apiUrl from '../../../../apiConfig'
 import Button from '@material-ui/core/Button'
 import './ChangePassword.scss'
 

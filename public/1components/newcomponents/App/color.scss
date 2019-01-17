@@ -1,0 +1,40 @@
+@import './colors.scss'
+
+.flash-success,
+.flash-warning,
+.flash-error {
+  background-color: $white;
+  display: block;
+  left: 38%;
+  padding: 30px;
+  position: fixed;
+  text-align: center;
+  top: 15%;
+  width: 25%;
+  height: 430px;
+  z-index: 1;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  box-shadow: 5px 5px 5px $black;
+  border-radius: 10px;
+}
+
+.flash-success {
+  border: 5px solid $success;
+  background-image: url('./success.jpg');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.flash-warning {
+  border: 5px solid $warning;
+}
+
+.flash-error {
+  background-image: url('./error-fail.jpg');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  border: 5px solid $error;
+}

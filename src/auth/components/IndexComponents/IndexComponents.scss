@@ -1,8 +1,7 @@
-@import './ChangePasswordColor.scss';
+@import './DeleteComponentsColor.scss';
 
-.change-password-container {
-  // background-image: url("./SignIn.jpg");
-  background-color: rgba(0,0,0,0.4);
+.delete-components-container {
+//   background-image: url("./SignIn.jpg");
   background-size: cover;
   display: flex;
   font-family: 'Thasadith', sans-serif;
@@ -11,7 +10,7 @@
   border-radius: 50%;
 }
 
-.change-password-header {
+.delete-components-header {
   margin-left: 6%;
   flex-direction: column;
   font-weight: 600;
@@ -23,11 +22,10 @@
   border-radius: 5px;
 }
 
-.auth-form-change-password {
-  background-color: rgba(0,0,0,0.4);
+.auth-form-delete-components {
+  background-color: rgba(0,0,0,0.6);
   display: flex;
   justify-content: center;
-  align-self: center;
   flex-direction: column;
   height: 400px;
   margin: 5%;
@@ -36,8 +34,9 @@
   border-radius: 15px;
   padding: 5%;
   text-align: left;
-  width: 50%;
+  width: 30%;
   font-family: 'Thasadith', sans-serif;
+}
 
   h3,
   input {
@@ -48,9 +47,9 @@
   }
 
   button {
-    font-family: 'Thasadith', sans-serif;
+  font-family: 'Thasadith', sans-serif;
     align-self: center;
     max-width: 200px;
     background-color: $charcoal;
+    color: orange;
   }
-}

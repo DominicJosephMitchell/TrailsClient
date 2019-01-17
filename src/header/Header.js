@@ -5,8 +5,11 @@ import './Header.scss'
 
 const authenticatedOptions = (
   <React.Fragment>
-    <Link to="/view-trails">View Trails</Link>
-    <Link to="/finished-trails">Trails Finished</Link>
+    <Link to="/create-components">Create Trail</Link>
+    <Link to="/read-components">Show Trail</Link>
+    <Link to="/update-components">Update Trail</Link>
+    <Link to="/delete-components">Delete Trail</Link>
+    <Link to="/index-components">Index Trail</Link>
     <Link to="/change-password">Change Password</Link>
     <Link to="/sign-out">Sign Out</Link>
   </React.Fragment>
