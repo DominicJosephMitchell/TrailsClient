@@ -8,14 +8,14 @@ import SignUp from './auth/components/SignUp/SignUp'
 import SignIn from './auth/components/SignIn/SignIn'
 import SignOut from './auth/components/SignOut/SignOut'
 import ChangePassword from './auth/components/ChangePassword/ChangePassword'
-// import ViewTrails from './auth/components/ViewTrails/ViewTrails'
-// import Trails from './auth/components/Trails'
-// import CrudComponents from './auth/components/CrudComponents/CrudComponents'
 import TrailsCreate from './auth/components/CreateComponents/CreateComponents'
 import TrailsRead from './auth/components/ReadComponents/ReadComponents'
 import TrailsUpdate from './auth/components/UpdateComponents/UpdateComponents'
-import TrailsDelete from './auth/components/DeleteComponents/DeleteComponents'
+// import TrailsDelete from './auth/components/DeleteComponents/DeleteComponents'
 import TrailsIndex from './auth/components/IndexComponents/IndexComponents'
+import { trailsIndex } from './auth/api'
+import messages from './auth/messages'
+
 
 class App extends Component {
   constructor () {
@@ -24,11 +24,31 @@ class App extends Component {
     this.state = {
       user: null,
       flashMessage: '',
-      flashType: null
+      flashType: null,
+      trails: []
     }
   }
 
-  setUser = user => this.setState({ user })
+  /*---------------Round Index Action-------------------*/
+  getAllTrails = () => {
+    trailsIndex(this.state.user)
+      // .then(res => res.ok ? res : new Error())
+      .then(res => res.json())
+      // .then(res => console.log(res.rounds))
+      .then(
+        res =>
+          this.setState({
+            trails: res.trails
+          })
+      )
+      // .then(console.log(this.state.rounds))
+      .then(() => this.flash(messages.showAllTrailsSuccess, 'flash-success'))
+      // .then(() => history.push('/'))
+      .catch(() => this.flash(messages.showAllTrailsFailure, 'flash-error'))
+    // console.log(res)
+  }
+
+  setUser = user => this.setState({ user }, this.getAllTrails)
 
   clearUser = () => this.setState({ user: null })
 
@@ -48,8 +68,6 @@ class App extends Component {
       <React.Fragment>
         <Header user={user} />
         {flashMessage && <h3 className={flashType}>{flashMessage}</h3>}
-        {/* <CrudComponents user={user} />
-        {flashMessage && <h3 className={flashType}>{flashMessage}</h3>} */}
        
         <main className="container">
           <Route path='/sign-up' render={() => (
@@ -64,30 +82,21 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword flash={this.flash} user={user} />
           )} />
-          {/* <Route path='/view-trails' render={() => (
-            <ViewTrails flash={this.flash} user={user} />
-          )} /> */}
-          {/* <Route path='/trails-finished' render={() => (
-            <ViewTrails flash={this.flash} user={user} />
-          )} /> */}
           
           {/* CRUD */}
-          {/* <Route user={user} path='/crud-components' render={() => (
-            <CrudComponents flash={this.flash} user={user} />
-          )} /> */}
           <Route user={user} path='/create-components' render={() => (
-            <TrailsCreate flash={this.flash} user={user} />
+            <TrailsCreate getAllTrails={this.getAllTrails} flash={this.flash} user={user} />
           )} />
-          <Route path='/crud-components' render={() => (
+          {/* <Route path='/delete-components' render={() => (
             <TrailsDelete flash={this.flash} user={user} />
+          )} /> */}
+          <Route path='/index-components' render={() => (
+            <TrailsIndex getAllTrails={this.getAllTrails} trails={this.state.trails} flash={this.flash} user={user} />
           )} />
-          <Route path='/crud-components' render={() => (
-            <TrailsIndex flash={this.flash} user={user} />
-          )} />
-          <Route path='/crud-components' render={() => (
+          <Route path='/read-components' render={() => (
             <TrailsRead flash={this.flash} user={user} />
           )} />
-          <Route path='/crud-components' render={() => (
+          <Route path='/update-components' render={() => (
             <TrailsUpdate flash={this.flash} user={user} />
           )} />
           

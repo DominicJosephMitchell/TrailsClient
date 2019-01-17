@@ -14,14 +14,14 @@ class TrailsCreate extends Component {
     super(props)
 
     this.state = {
-      trail: '',
+      path: '',
       town: '',
       state: '',
       // message: null
     }
   }
 
-  onTrailChange = event => this.setState({ trail: event.target.value })
+  onPathChange = event => this.setState({ path: event.target.value })
 
   onTownChange = event => this.setState({ town: event.target.value })
 
@@ -30,7 +30,7 @@ class TrailsCreate extends Component {
   trailsCreate = event => {
     event.preventDefault()
 
-    const { trail, town, state } = this.state
+    const { path, town, state } = this.state
     const { flash, history, user } = this.props
     console.log(user)
     
@@ -45,7 +45,7 @@ class TrailsCreate extends Component {
   }
 
   render() {
-    const { trail, town, state, } = this.state
+    const { path, town, state, } = this.state
 
     return (
       <div className="sign-up-container">
@@ -56,7 +56,7 @@ class TrailsCreate extends Component {
           <form className='auth-form' onSubmit={this.trailsCreate}>
             <div className="form-group">
               <label>Add Trail Name:  </label>
-              <input type="text" className="trail" value={trail} onChange={this.onTrailChange} />
+              <input type="text" className="path" value={path} onChange={this.onPathChange} />
             </div>
             <div className="form-group">
               <label>Add Town Name: </label>
