@@ -32,48 +32,42 @@ class TrailsCreate extends Component {
 
     const { path, town, state } = this.state
     const { flash, history, user } = this.props
-    console.log(user)
+    // console.log(user)
     
     trailsCreate(this.state, user)
-    // .then(handleErrors)  
-    // .then(res => res.ok ? res : new Error())
-    // .then(res => res.json())
-    // .then(res => setUser(res.user))
-    // .then(() => flash(messages.signInSuccess, 'flash-success'))
-    // .then(() => history.push('/'))
-    // .catch(() => flash(messages.signInFailure, 'flash-error'))
+      // .then(handleErrors)
+      .then(res => res.ok ? res : new Error())
+      .then(res => res.json())
+      .then(res => setUser(res.user))
+      .then(() => flash(messages.signInSuccess, 'flash-success'))
+      // .then(() => history.push('/'))
+      .catch(() => flash(messages.signInFailure, 'flash-error'))
   }
 
   render() {
     const { path, town, state, } = this.state
 
     return (
-      <div className="sign-up-container">
-        <div className="sign-up-header">
-          <div style={{ marginTop: 10 }}>
-            <h3>Create Trails</h3>
-          </div>
-          <form className='auth-form' onSubmit={this.trailsCreate}>
-            <div className="form-group">
-              <label>Add Trail Name:  </label>
-              <input type="text" className="path" value={path} onChange={this.onPathChange} />
-            </div>
-            <div className="form-group">
-              <label>Add Town Name: </label>
-              <input type="text" className="town" value={town} onChange={this.onTownChange}/>
-            </div>
-            <div className="form-group">
-              <label>Add State Name: </label>
-              <input type="text" className="state" value={state} onChange={this.onStateChange}/>
-            </div>
-            <div className="form-group">
-              <input type="submit" value="Create" className="btn btn-primary" />
-            </div>
-            <button type="submit">Create</button>
-          </form>
-          {this.state.message && <span>{this.state.message}</span>}
+      <form className='auth-form' onSubmit={this.trailsCreate}>
+        <h3>Create Trails</h3>
+
+        <div className="form-group">
+          {/* <label>Add Trail Name:  </label> */}
+          <input type="text" className="path" placeholder="Create Trails Name" value={path} onChange={this.onPathChange} />
         </div>
-      </div>
+        <div className="form-group">
+          {/* <label>Add Town Name: </label> */}
+          <input type="text" className="town" placeholder="Create Trails Town" value={town} onChange={this.onTownChange}/>
+        </div>
+        <div className="form-group">
+          {/* <label>Add State Name: </label> */}
+          <input type="text" className="state" placeholder="Create Trails State" value={state} onChange={this.onStateChange}/>
+        </div>
+        <div className="form-group">
+          <input type="submit" value="Create" className="btn btn-warning" />
+        </div>
+        {/* <button type="submit">Create</button> */}
+      </form>
     )
   }
 }

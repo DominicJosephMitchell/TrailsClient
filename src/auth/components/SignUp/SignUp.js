@@ -77,7 +77,7 @@ class SignUp extends Component {
             placeholder="Confirm Password"
             onChange={this.handleChange}
           />
-          <button type="submit">Change Password</button>
+          <button type="submit">Sign In</button>
         </form>
       </div>
     )

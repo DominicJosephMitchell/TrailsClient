@@ -1,7 +1,7 @@
 @import './CreateComponentsColor.scss';
 
-.create-components-container {
-//   background-image: url("./SignIn.jpg");
+.change-password-container {
+  background-color: rgba(0,0,0,0.4);
   background-size: cover;
   display: flex;
   font-family: 'Thasadith', sans-serif;
@@ -10,7 +10,7 @@
   border-radius: 50%;
 }
 
-.create-components-header {
+.change-password-header {
   margin-left: 6%;
   flex-direction: column;
   font-weight: 600;
@@ -22,10 +22,11 @@
   border-radius: 5px;
 }
 
-.auth-form-create-components {
-  background-color: rgba(0,0,0,0.6);
+.auth-form-change-password {
+  background-color: rgba(0,0,0,0.4);
   display: flex;
   justify-content: center;
+  align-self: center;
   flex-direction: column;
   height: 400px;
   margin: 5%;
@@ -34,9 +35,8 @@
   border-radius: 15px;
   padding: 5%;
   text-align: left;
-  width: 30%;
+  width: 50%;
   font-family: 'Thasadith', sans-serif;
-}
 
   h3,
   input {
@@ -47,9 +47,9 @@
   }
 
   button {
-  font-family: 'Thasadith', sans-serif;
+    font-family: 'Thasadith', sans-serif;
     align-self: center;
     max-width: 200px;
     background-color: $charcoal;
-    color: orange;
   }
+}

@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom'
 import { handleErrors, changePassword } from '../../api'
 import messages from '../../messages'
 import apiUrl from '../../../apiConfig'
-// import Button from '@material-ui/core/Button'
 import './ChangePassword.scss'
 
 class ChangePassword extends Component {
@@ -41,7 +40,7 @@ class ChangePassword extends Component {
       <form className='auth-form' onSubmit={this.changePassword}>
         <h3>Change Password</h3>
 
-        <label htmlFor="oldpw">Old Password</label>
+        {/* <label htmlFor="oldpw">Old Password</label> */}
         <input
           required
           name="oldPassword"
@@ -50,7 +49,7 @@ class ChangePassword extends Component {
           placeholder="Old Password"
           onChange={this.handleChange}
         />
-        <label htmlFor="newPassword">New Password</label>
+        {/* <label htmlFor="newPassword">New Password</label> */}
         <input
           required
           name="newPassword"

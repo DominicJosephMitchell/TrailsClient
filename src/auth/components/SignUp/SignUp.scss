@@ -26,9 +26,9 @@
   background-size: cover;
   display: flex;
   font-family: 'Thasadith', sans-serif;
-  height: 700px;
-  justify-content: space-between;
-  // border-radius: 50%;
+  height: 500px;
+  justify-content: space-between, center;
+  border-radius: 50%;
 }
 
 .sign-up-header {
@@ -48,7 +48,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: left;
-  height: 400px;
+  height: 450px;
   margin: 5%;
   max-width: 600px;
   color: $white;
@@ -57,4 +57,5 @@
   text-align: left;
   width: 30%;
   font-family: 'Thasadith', sans-serif;
+  border-radius: 50%;
 }
