@@ -1,6 +1,6 @@
 {
-  "name": "capstone",
-  "homepage": "https://DominicJosephMitchell.github.io/TrailsClient",
+  "name": "TrailsClient",
+  "homepage": "https://DominicJosephMitchell.github.io/TrailsClient/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
