@@ -23,16 +23,21 @@ class TrailsUpdate extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props.trails)
+
     const firstTrailId = this.props.trails[0].id
+    // console.log(this.props.trails)
+
     this.changeTrailData(firstTrailId)
   }
 
   changeTrailData = id => {
+    // console.log(this.props.trails)
     const trail = this.props.trails.find(movie => String(movie.id) === String(id))
     this.setState({
       path: trail.path || '',
       town: trail.town || '',
-      state: movie.state || '',
+      state: trail.state || '',
       id: trail.id
     })
   }
@@ -68,7 +73,7 @@ class TrailsUpdate extends Component {
       .catch(() => console.error('oh no got an error'))
   }
   render() {
-    // console.log(map)
+    // console.log(this.props.trails.map)
 
     const SelectOptions = this.props.trails.map((trail, index) => {
       return <option key={index} value={trail.id}>{trail.path} (ID: {trail.id})</option>

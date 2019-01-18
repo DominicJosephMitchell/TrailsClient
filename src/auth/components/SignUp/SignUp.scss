@@ -5,22 +5,6 @@
   text-align: left;
 }
 
-  h3,
-  input {
-    border-radius: 15px;
-    margin-bottom: 5%;
-    padding: 2%;
-    font-family: 'Thasadith', sans-serif;
-  }
-
-  button {
-  font-family: 'Thasadith', sans-serif;
-    align-self: center;
-    max-width: 200px;
-    background-color: $charcoal;
-    color: orange;
-  }
-
 .sign-up-container {
   background-image: url("./SignUp.jpg");
   background-size: cover;
@@ -40,9 +24,11 @@
   margin: 2%;
   color: $white;
   border-radius: 5px;
+  color: chartreuse;
+  font-weight: bold;
 }
 
-.auth-form-sign-up {
+  .auth-form-sign-up {
   background-color: rgba(0,0,0,0.6);
   display: flex;
   justify-content: center;
@@ -58,4 +44,24 @@
   width: 30%;
   font-family: 'Thasadith', sans-serif;
   border-radius: 50%;
+  color: white;
 }
+
+
+  h3,
+  input {
+    border-radius: 15px;
+    margin-bottom: 5%;
+    padding: 2%;
+    font-family: 'Thasadith', sans-serif;
+    color: white;
+    font-weight: bold;
+  }
+
+  button {
+  font-family: 'Thasadith', sans-serif;
+    align-self: center;
+    max-width: 200px;
+    background-color: $charcoal;
+    color: orange;
+  }

@@ -1,13 +1,21 @@
 @import './ReadComponentsColor.scss';
 
+.list {
+  font-size: 18px;
+  text-align: left;
+}
+
 .read-components-container {
-//   background-image: url("./SignIn.jpg");
+  background-image: url("./readbike.jpg");
+  // background-color: rgba(0,0,0,0.4);
   background-size: cover;
   display: flex;
   font-family: 'Thasadith', sans-serif;
   height: 550px;
   justify-content: space-between;
   border-radius: 50%;
+  color: white;
+  font-weight: bold;
 }
 
 .read-components-header {
@@ -20,10 +28,11 @@
   margin-top: 0;
   color: $white;
   border-radius: 5px;
+  color: gold;
+  font-weight: bold;
 }
 
 .auth-form-read-components {
-  background-color: rgba(0,0,0,0.6);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -36,14 +45,18 @@
   text-align: left;
   width: 30%;
   font-family: 'Thasadith', sans-serif;
+  color: gold;
+  font-weight: bold;
 }
 
-  h3,
+  h1,
   input {
     border-radius: 15px;
     margin-bottom: 5%;
     padding: 2%;
     font-family: 'Thasadith', sans-serif;
+    color: gold;
+    font-weight: bold;
   }
 
   button {

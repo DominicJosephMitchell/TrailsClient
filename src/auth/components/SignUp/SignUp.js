@@ -49,7 +49,7 @@ class SignUp extends Component {
         </div>
 
         <form className='auth-form-sign-up' onSubmit={this.signUp}>
-          <h3>Sign Up</h3>
+          <h4>Sign Up</h4>
           <label htmlFor="email">Email</label>
           <input
             required

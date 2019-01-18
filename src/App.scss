@@ -15,7 +15,7 @@ $charcoal: rgba(0,0,0,0.1);
   top: 35%;
   width: 50%;
   z-index: 1;
-  color:orangered;
+  color:fuchsia;
   border-radius: 100%;
 }
 
@@ -43,7 +43,8 @@ $charcoal: rgba(0,0,0,0.1);
   h3,
   input {
     margin-bottom: 5%;
-    color: lightblue;
+    color: darkblue;
+    font-weight: bold;
   }
 
   button {

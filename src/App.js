@@ -97,7 +97,7 @@ class App extends Component {
             <TrailsRead flash={this.flash} user={user} />
           )} />
           <Route path='/update-components' render={() => (
-            <TrailsUpdate flash={this.flash} user={user} />
+            <TrailsUpdate trails={this.state.trails} flash={this.flash} user={user} />
           )} />
           
         </main>

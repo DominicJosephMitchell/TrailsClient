@@ -7,6 +7,7 @@
 
 .sign-in-container {
   background-image: url("./SignIn.jpg");
+  // background-color: rgba(0,0,0,0.4);
   background-size: cover;
   display: flex;
   font-family: 'Thasadith', sans-serif;
@@ -25,12 +26,15 @@
   margin-top: 0;
   color: $white;
   border-radius: 5px;
+  color: white;
+  font-weight: bold;
 }
 
 .auth-form-sign-in {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.4);
   display: flex;
   justify-content: center;
+  align-self: center;
   flex-direction: column;
   height: 400px;
   margin: 5%;
@@ -42,6 +46,7 @@
   width: 30%;
   font-family: 'Thasadith', sans-serif;
   border-radius: 50%;
+  color: white;
 }
 
   h3,
@@ -50,6 +55,8 @@
     margin-bottom: 5%;
     padding: 2%;
     font-family: 'Thasadith', sans-serif;
+    color: white;
+    font-weight: bold;
   }
 
   button {

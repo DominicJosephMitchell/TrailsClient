@@ -37,29 +37,33 @@ class ChangePassword extends Component {
     const { oldPassword, newPassword } = this.state
 
     return (
-      <form className='auth-form' onSubmit={this.changePassword}>
-        <h3>Change Password</h3>
-
-        {/* <label htmlFor="oldpw">Old Password</label> */}
-        <input
-          required
-          name="oldPassword"
-          value={oldPassword}
-          type="password"
-          placeholder="Old Password"
-          onChange={this.handleChange}
-        />
-        {/* <label htmlFor="newPassword">New Password</label> */}
-        <input
-          required
-          name="newPassword"
-          value={newPassword}
-          type="password"
-          placeholder="New Password"
-          onChange={this.handleChange}
-        />
-        <button type="submit">Change Password</button>
-      </form>
+      <div className="change-password-container">
+        <div className="change-password-header">
+          <h3>Stay Protected, LOCK IT UP !</h3>
+        </div>
+        <form className='auth-form' onSubmit={this.changePassword}>
+          <h3>Change Password</h3>
+          {/* <label htmlFor="oldpw">Old Password</label> */}
+          <input
+            required
+            name="oldPassword"
+            value={oldPassword}
+            type="password"
+            placeholder="Old Password"
+            onChange={this.handleChange}
+          />
+          {/* <label htmlFor="newPassword">New Password</label> */}
+          <input
+            required
+            name="newPassword"
+            value={newPassword}
+            type="password"
+            placeholder="New Password"
+            onChange={this.handleChange}
+          />
+          <button type="submit">Change Password</button>
+        </form>
+      </div>
     )
   }
 }

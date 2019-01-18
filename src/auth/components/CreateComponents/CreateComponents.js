@@ -36,40 +36,60 @@ class TrailsCreate extends Component {
     
     trailsCreate(this.state, user)
       // .then(handleErrors)
-      .then(() => signIn(this.state))
+      // .then(() => signIn(this.state))
       // .then(handleErrors)
-      .then(res => res.ok ? res : new Error())
-      .then(res => res.json())
-      .then(res => setUser(res.user))
+      // .then(res => res.ok ? res : new Error())
+      // .then(res => res.json())
+      // .then(res => setUser(res.user))
       .then(() => flash(messages.signInSuccess, 'flash-success'))
       .then(() => history.push('/'))
-      .catch(() => flash(messages.signInFailure, 'flash-error'))
+      // .catch(() => flash(messages.signInFailure, 'flash-error'))
+      .then(() => flash(messages.signInSuccess, 'flash-success'))
   }
 
   render() {
     const { path, town, state, } = this.state
 
     return (
-      <form className='auth-form' onSubmit={this.trailsCreate}>
-        <h3>Create Trails</h3>
-
-        <div className="form-group">
-          {/* <label>Add Trail Name:  </label> */}
-          <input type="text" className="path" placeholder="Create Trails Name" value={path} onChange={this.onPathChange} />
+      <div className="create-components-container">
+        <div className="create-components-header">
+          <h3>Create Trails</h3>
         </div>
-        <div className="form-group">
-          {/* <label>Add Town Name: </label> */}
-          <input type="text" className="town" placeholder="Create Trails Town" value={town} onChange={this.onTownChange}/>
-        </div>
-        <div className="form-group">
-          {/* <label>Add State Name: </label> */}
-          <input type="text" className="state" placeholder="Create Trails State" value={state} onChange={this.onStateChange}/>
-        </div>
-        <div className="form-group">
-          <input type="submit" value="Create" className="btn btn-warning" />
-        </div>
-        {/* <button type="submit">Create</button> */}
-      </form>
+        <form className='auth-form-create-components' onSubmit={this.trailsCreate}>
+          <h3>Trails</h3>
+          {/* <div className="form-group"> */}
+          <label htmlFor="Create Trail Name">Create Trail Name</label>
+          <input
+            type="text"
+            className="path"
+            placeholder="Create Trails Name"
+            value={path} onChange={this.onPathChange}
+          />
+          {/* </div> */}
+          {/* <div className="form-group"> */}
+          <label htmlFor="Create Trails Town">CreateTrails Town</label>
+          <input
+            type="text"
+            className="town"
+            placeholder="Create Trails Town"
+            value={town} onChange={this.onTownChange}
+          />
+          {/* </div> */}
+          {/* <div className="form-group"> */}
+          <label htmlFor="Create Trails State">Create Trails State</label>
+          <input
+            type="text"
+            className="state"
+            placeholder="Create Trails State"
+            value={state}
+            onChange={this.onStateChange}
+          />
+          {/* </div> */}
+          {/* <div className="form-group"> */}
+          <input type="submit" value="Create" className="btn btn-warning"/>
+          <button type="submit">Create</button>
+        </form>
+      </div>
     )
   }
 }

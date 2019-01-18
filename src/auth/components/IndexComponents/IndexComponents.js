@@ -18,9 +18,9 @@ const TrailsIndex = props => {
     }
     return (
       <div key={trail._id}>
-        <h3><b>path</b>: {trail.path}</h3>
-        <h5><b>town</b>: {trail.town}</h5>
-        <h5><b>state</b>: {trail.state}</h5>
+        <h1><b>path</b>: {trail.path}</h1>
+        <h1><b>town</b>: {trail.town}</h1>
+        <h1><b>state</b>: {trail.state}</h1>
         <div className="row">
           {/* <Link to="/trails-update" className="btn btn-warning mx-3">
             Update

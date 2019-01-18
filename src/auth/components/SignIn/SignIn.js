@@ -45,7 +45,7 @@ class SignIn extends Component {
           <h4>The Journey Begins!</h4>
         </div>
         <form className='auth-form-sign-in' onSubmit={this.signIn}>
-          <h3>Sign In</h3>
+          <h4>Sign In</h4>
           <label htmlFor="email">Email</label>
           <input
             required
