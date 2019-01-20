@@ -33,7 +33,7 @@ class TrailsUpdate extends Component {
 
   changeTrailData = id => {
     // console.log(this.props.trails)
-    const trail = this.props.trails.find(movie => String(movie.id) === String(id))
+    const trail = this.props.trails.find(trail => String(trail.id) === String(id))
     this.setState({
       path: trail.path || '',
       town: trail.town || '',
@@ -83,7 +83,7 @@ class TrailsUpdate extends Component {
       <form
         className="trail-form"
         onSubmit={this.handleFormSubmit}>
-        <h3>Update Movie</h3>
+        <h3>Update Trail</h3>
 
         <label htmlFor="id">Id</label>
         <select
