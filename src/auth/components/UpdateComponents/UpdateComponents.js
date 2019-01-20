@@ -26,13 +26,11 @@ class TrailsUpdate extends Component {
     console.log(this.props.trails)
 
     const firstTrailId = this.props.trails[0].id
-    // console.log(this.props.trails)
 
     this.changeTrailData(firstTrailId)
   }
 
   changeTrailData = id => {
-    // console.log(this.props.trails)
     const trail = this.props.trails.find(trail => String(trail.id) === String(id))
     this.setState({
       path: trail.path || '',
@@ -73,46 +71,58 @@ class TrailsUpdate extends Component {
       .catch(() => console.error('oh no got an error'))
   }
   render() {
-    // console.log(this.props.trails.map)
-
     const SelectOptions = this.props.trails.map((trail, index) => {
       return <option key={index} value={trail.id}>{trail.path} (ID: {trail.id})</option>
     })
 
     return (
-      <form
-        className="trail-form"
-        onSubmit={this.handleFormSubmit}>
-        <h3>Update Trail</h3>
+      <div className="create-updates-container">
+        <div className="create-updates-header">
+          <h3>Update Trail</h3> 
+        </div>
+        <form
+          className="trail-form"
+          onSubmit={this.handleFormSubmit}>
+          <h3>Trails</h3>
 
-        <label htmlFor="id">Id</label>
-        <select
-          name="id"
-          onChange={this.handleInputChange}>
-          {SelectOptions}
-        </select>
+          <label htmlFor="id">Id</label>
+          <select
+            name="id"
+            onChange={this.handleInputChange}>
+            {SelectOptions}
+          </select>
 
-        <label htmlFor="path">Path</label>
-        <input
-          name="path"
-          value={this.state.path}
-          onChange={this.handleInputChange} />
+          {/* <label htmlFor="path">Path</label>
+          <input
+            type="text"
+            className="path"
+            placeholder="Update Trails Name"
+            value={this.state.path} onChange={this.handleInputChange}
+          /> */}
 
-        <label htmlFor="town">Town</label>
-        <input
-          name="town"
-          value={this.state.town}
-          onChange={this.handleInputChange} />
+          <label htmlFor="path">Path</label>
+          <input
+            name="path"
+            value={this.state.path}
+            onChange={this.handleInputChange} />
 
-        <label htmlFor="state">State</label>
-        <input
-          name="state"
-          value={this.state.state}
-          onChange={this.handleInputChange} />
+          <label htmlFor="town">Town</label>
+          <input
+            name="town"
+            value={this.state.town}
+            onChange={this.handleInputChange} />
 
-        <button type="submit">Update Trail</button>
+          <label htmlFor="state">State</label>
+          <input
+            name="state"
+            value={this.state.state}
+            onChange={this.handleInputChange} />
+          
+          {/* <input type="submit" value="Create" className="btn btn-warning" /> */}
+          <button type="submit">Update Trail</button>
 
-      </form>
+        </form>
+      </div>
     )
   }
 }

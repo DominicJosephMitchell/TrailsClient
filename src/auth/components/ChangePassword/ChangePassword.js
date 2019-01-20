@@ -39,11 +39,11 @@ class ChangePassword extends Component {
     return (
       <div className="change-password-container">
         <div className="change-password-header">
-          <h3>Stay Protected, LOCK IT UP !</h3>
+          <h3>Stay Safe LOCK IT UP!</h3>
         </div>
-        <form className='auth-form' onSubmit={this.changePassword}>
+        <form className='auth-form-change-password' onSubmit={this.changePassword}>
           <h3>Change Password</h3>
-          {/* <label htmlFor="oldpw">Old Password</label> */}
+          <label htmlFor="oldpw"></label>
           <input
             required
             name="oldPassword"
@@ -52,7 +52,7 @@ class ChangePassword extends Component {
             placeholder="Old Password"
             onChange={this.handleChange}
           />
-          {/* <label htmlFor="newPassword">New Password</label> */}
+          <label htmlFor="newPassword"></label>
           <input
             required
             name="newPassword"

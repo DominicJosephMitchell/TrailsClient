@@ -46,7 +46,7 @@ class SignIn extends Component {
         </div>
         <form className='auth-form-sign-in' onSubmit={this.signIn}>
           <h4>Sign In</h4>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email"></label>
           <input
             required
             type="email"
@@ -55,7 +55,7 @@ class SignIn extends Component {
             placeholder="Email"
             onChange={this.handleChange}
           />
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password"></label>
           <input
             required
             name="password"

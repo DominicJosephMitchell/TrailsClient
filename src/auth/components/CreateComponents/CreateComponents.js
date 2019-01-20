@@ -41,10 +41,9 @@ class TrailsCreate extends Component {
       // .then(res => res.ok ? res : new Error())
       // .then(res => res.json())
       // .then(res => setUser(res.user))
-      .then(() => flash(messages.signInSuccess, 'flash-success'))
       .then(() => history.push('/'))
-      // .catch(() => flash(messages.signInFailure, 'flash-error'))
       .then(() => flash(messages.signInSuccess, 'flash-success'))
+      .catch(() => flash(messages.signInFailure, 'flash-error'))
   }
 
   render() {
@@ -58,7 +57,7 @@ class TrailsCreate extends Component {
         <form className='auth-form-create-components' onSubmit={this.trailsCreate}>
           <h3>Trails</h3>
           {/* <div className="form-group"> */}
-          <label htmlFor="Create Trail Name">Create Trail Name</label>
+          <label htmlFor="Create Trail Name"></label>
           <input
             type="text"
             className="path"
@@ -67,7 +66,7 @@ class TrailsCreate extends Component {
           />
           {/* </div> */}
           {/* <div className="form-group"> */}
-          <label htmlFor="Create Trails Town">CreateTrails Town</label>
+          <label htmlFor="Create Trails Town"></label>
           <input
             type="text"
             className="town"
@@ -76,7 +75,7 @@ class TrailsCreate extends Component {
           />
           {/* </div> */}
           {/* <div className="form-group"> */}
-          <label htmlFor="Create Trails State">Create Trails State</label>
+          <label htmlFor="Create Trails State"></label>
           <input
             type="text"
             className="state"
@@ -86,7 +85,7 @@ class TrailsCreate extends Component {
           />
           {/* </div> */}
           {/* <div className="form-group"> */}
-          <input type="submit" value="Create" className="btn btn-warning"/>
+          {/* <input type="submit" value="Create" className="btn btn-warning"/> */}
           <button type="submit">Create</button>
         </form>
       </div>
