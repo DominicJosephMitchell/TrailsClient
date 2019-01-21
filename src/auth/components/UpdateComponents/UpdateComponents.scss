@@ -6,13 +6,12 @@
 }
 
 .update-components-container {
-  background-image: url('./repairbike.png');
-  // background-color: rgba(0,0,0,0.4);
+  background-image: url("./repairbike.png");
   background-size: cover;
   display: flex;
   font-family: 'Thasadith', sans-serif;
   height: 550px;
-  justify-content: space-between;
+  justify-content: space-between, center;
   border-radius: 50%;
 }
 
@@ -26,14 +25,17 @@
   margin-top: 0;
   color: $white;
   border-radius: 5px;
+  color: yellow;
+  font-weight: bold;
 }
 
 .auth-form-update-components {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.2);
   display: flex;
   justify-content: center;
+  align-self: center;
   flex-direction: column;
-  height: 400px;
+  height: 500px;
   margin: 5%;
   max-width: 600px;
   color: $white;
@@ -42,6 +44,7 @@
   text-align: left;
   width: 30%;
   font-family: 'Thasadith', sans-serif;
+  border-radius: 50%;
 }
 
   h3,

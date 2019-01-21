@@ -7,7 +7,6 @@
 
 .create-components-container {
   background-image: url("./buildbike.jpg");
-  // background-color: rgba(0,0,0,0.4);
   background-size: cover;
   display: flex;
   font-family: 'Thasadith', sans-serif;
@@ -26,6 +25,8 @@
   margin-top: 0;
   color: $white;
   border-radius: 5px;
+  color: darkgreen;
+  font-weight: bold;
 }
 
 .auth-form-create-components {

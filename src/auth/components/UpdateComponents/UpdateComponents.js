@@ -26,6 +26,7 @@ class TrailsUpdate extends Component {
     console.log(this.props.trails)
 
     const firstTrailId = this.props.trails[0].id
+    // const firstTrailId = this.props.trails[1].id
 
     this.changeTrailData(firstTrailId)
   }
@@ -76,15 +77,15 @@ class TrailsUpdate extends Component {
     })
 
     return (
-      <div className="create-updates-container">
-        <div className="create-updates-header">
+      <div className="updates-components-container">
+        <div className="updates-components-header">
           <h3>Update Trail</h3> 
         </div>
         <form
-          className="trail-form"
+          // className="trail-form"
+          className='auth-form-update-components'
           onSubmit={this.handleFormSubmit}>
           <h3>Trails</h3>
-
           <label htmlFor="id">Id</label>
           <select
             name="id"
@@ -92,35 +93,26 @@ class TrailsUpdate extends Component {
             {SelectOptions}
           </select>
 
-          {/* <label htmlFor="path">Path</label>
-          <input
-            type="text"
-            className="path"
-            placeholder="Update Trails Name"
-            value={this.state.path} onChange={this.handleInputChange}
-          /> */}
-
           <label htmlFor="path">Path</label>
           <input
             name="path"
             value={this.state.path}
-            onChange={this.handleInputChange} />
-
+            onChange={this.handleInputChange}
+          />
           <label htmlFor="town">Town</label>
           <input
             name="town"
             value={this.state.town}
-            onChange={this.handleInputChange} />
-
+            onChange={this.handleInputChange}
+          />
           <label htmlFor="state">State</label>
           <input
             name="state"
             value={this.state.state}
-            onChange={this.handleInputChange} />
-          
+            onChange={this.handleInputChange}
+          />         
           {/* <input type="submit" value="Create" className="btn btn-warning" /> */}
           <button type="submit">Update Trail</button>
-
         </form>
       </div>
     )

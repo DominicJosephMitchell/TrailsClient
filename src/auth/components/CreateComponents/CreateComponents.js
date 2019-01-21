@@ -17,7 +17,6 @@ class TrailsCreate extends Component {
       path: '',
       town: '',
       state: '',
-      // message: null
     }
   }
 
@@ -32,7 +31,6 @@ class TrailsCreate extends Component {
 
     const { path, town, state } = this.state
     const { flash, history, user } = this.props
-    // console.log(user)
     
     trailsCreate(this.state, user)
       // .then(handleErrors)
@@ -56,7 +54,6 @@ class TrailsCreate extends Component {
         </div>
         <form className='auth-form-create-components' onSubmit={this.trailsCreate}>
           <h3>Trails</h3>
-          {/* <div className="form-group"> */}
           <label htmlFor="Create Trail Name"></label>
           <input
             type="text"
@@ -64,8 +61,6 @@ class TrailsCreate extends Component {
             placeholder="Create Trails Name"
             value={path} onChange={this.onPathChange}
           />
-          {/* </div> */}
-          {/* <div className="form-group"> */}
           <label htmlFor="Create Trails Town"></label>
           <input
             type="text"
@@ -73,8 +68,6 @@ class TrailsCreate extends Component {
             placeholder="Create Trails Town"
             value={town} onChange={this.onTownChange}
           />
-          {/* </div> */}
-          {/* <div className="form-group"> */}
           <label htmlFor="Create Trails State"></label>
           <input
             type="text"
@@ -83,9 +76,6 @@ class TrailsCreate extends Component {
             value={state}
             onChange={this.onStateChange}
           />
-          {/* </div> */}
-          {/* <div className="form-group"> */}
-          {/* <input type="submit" value="Create" className="btn btn-warning"/> */}
           <button type="submit">Create</button>
         </form>
       </div>
