@@ -26,8 +26,7 @@ class TrailsUpdate extends Component {
     console.log(this.props.trails)
 
     const firstTrailId = this.props.trails[0].id
-    // const firstTrailId = this.props.trails[1].id
-
+    // const firstTrailId = this.props.trails[1].id   
     this.changeTrailData(firstTrailId)
   }
 
@@ -63,8 +62,8 @@ class TrailsUpdate extends Component {
   handleFormSubmit = event => {
     event.preventDefault()
     const data = { ...this.state }
-
-    patchTrail(data, this.props.user)
+    // patchTrail(data, this.props.user)
+    trailsUpdate(data, this.props.user)
       .then(res => res.ok ? res : new Error())
       .then(() => this.props.flash('Updated that Trail, Good Job', 'flash-success'))
       .then(this.clearForm)
@@ -77,8 +76,8 @@ class TrailsUpdate extends Component {
     })
 
     return (
-      <div className="updates-components-container">
-        <div className="updates-components-header">
+      <div className="update-components-container">
+        <div className="update-components-header">
           <h3>Update Trail</h3> 
         </div>
         <form
@@ -114,6 +113,7 @@ class TrailsUpdate extends Component {
           {/* <input type="submit" value="Create" className="btn btn-warning" /> */}
           <button type="submit">Update Trail</button>
         </form>
+        {this.state.message && <span>{this.state.message}</span>}
       </div>
     )
   }

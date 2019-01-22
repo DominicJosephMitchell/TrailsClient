@@ -15,6 +15,7 @@ import TrailsUpdate from './auth/components/UpdateComponents/UpdateComponents'
 import TrailsIndex from './auth/components/IndexComponents/IndexComponents'
 import { trailsIndex } from './auth/api'
 import messages from './auth/messages'
+// import CssBaseline from '@material-ui/core/CssBaseline'
 
 
 class App extends Component {
@@ -32,20 +33,18 @@ class App extends Component {
   /*---------------Round Index Action-------------------*/
   getAllTrails = () => {
     trailsIndex(this.state.user)
-      // .then(res => res.ok ? res : new Error())
+      .then(res => res.ok ? res : new Error())
       .then(res => res.json())
-      // .then(res => console.log(res.rounds))
+      .then(res => res) //console.log(res.trails))
       .then(
         res =>
           this.setState({
             trails: res.trails
           })
       )
-      // .then(console.log(this.state.rounds))
       .then(() => this.flash(messages.showAllTrailsSuccess, 'flash-success'))
       // .then(() => history.push('/'))
       .catch(() => this.flash(messages.showAllTrailsFailure, 'flash-error'))
-    // console.log(res)
   }
 
   setUser = user => this.setState({ user }, this.getAllTrails)
@@ -66,6 +65,7 @@ class App extends Component {
 
     return (
       <React.Fragment>
+        {/* <CssBaseline /> */}
         <Header user={user} />
         {flashMessage && <h3 className={flashType}>{flashMessage}</h3>}
        
