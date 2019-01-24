@@ -23,20 +23,21 @@ class TrailsUpdate extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.trails)
+    // console.log(this.props.trails)
 
-    const firstTrailId = this.props.trails[0].id
+    const firstTrailId = this.props.trails[0]._id
     // const firstTrailId = this.props.trails[1].id   
     this.changeTrailData(firstTrailId)
   }
 
   changeTrailData = id => {
-    const trail = this.props.trails.find(trail => String(trail.id) === String(id))
+    // debugger
+    const trail = this.props.trails.find(trail => String(trail._id) === String(id))
     this.setState({
       path: trail.path || '',
       town: trail.town || '',
       state: trail.state || '',
-      id: trail.id
+      _id: trail._id
     })
   }
 
@@ -61,7 +62,9 @@ class TrailsUpdate extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault()
+    // debugger
     const data = { ...this.state }
+    // console.log(this.state)
     // patchTrail(data, this.props.user)
     trailsUpdate(data, this.props.user)
       .then(res => res.ok ? res : new Error())
@@ -72,7 +75,7 @@ class TrailsUpdate extends Component {
   }
   render() {
     const SelectOptions = this.props.trails.map((trail, index) => {
-      return <option key={index} value={trail.id}>{trail.path} (ID: {trail.id})</option>
+      return <option key={index} value={trail._id}>{trail.path} (ID: {trail._id})</option>
     })
 
     return (

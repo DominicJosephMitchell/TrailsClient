@@ -37,10 +37,12 @@ class App extends Component {
       .then(res => res.json())
       .then(res => res) //console.log(res.trails))
       .then(
-        res =>
+        res => {
+          console.log(res)
           this.setState({
             trails: res.trails
           })
+        }
       )
       .then(() => this.flash(messages.showAllTrailsSuccess, 'flash-success'))
       // .then(() => history.push('/'))

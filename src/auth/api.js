@@ -91,8 +91,8 @@ export const trailsCreate = ({ path, town, state }, user) => {
 }
 
 export const trailsDelete = (trail, user) => {
-  console.log(user)
-  console.log(trail)
+  // console.log(user)
+  // console.log(trail)
 
   return fetch(apiUrl + '/trails/' + trail._id, {
     method: 'DELETE',
@@ -114,16 +114,20 @@ export const trailsRead = (user) => {
   })
 }
 
-export const trailsUpdate = (trail, user) => {
-  console.log('here is user', user)
-  console.log('here is trail', trail) 
-
-  return fetch(apiUrl + '/trails/' + trail._id, {
+export const trailsUpdate = ({ _id, path, town, state }, user) => {
+  return fetch(apiUrl + '/trails/' + _id, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Token token=${user.token}`
-    }
+    },
+    body: JSON.stringify({
+      trail: {
+        path: path,
+        town: town,
+        state: state
+      }
+    })
   })
 }
 
