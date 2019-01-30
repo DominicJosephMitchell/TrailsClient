@@ -91,9 +91,6 @@ export const trailsCreate = ({ path, town, state }, user) => {
 }
 
 export const trailsDelete = (trail, user) => {
-  // console.log(user)
-  // console.log(trail)
-
   return fetch(apiUrl + '/trails/' + trail._id, {
     method: 'DELETE',
     headers: {
@@ -140,5 +137,3 @@ export const trailsIndex = (user) => {
     }
   })
 }
-
-// // ********************************************

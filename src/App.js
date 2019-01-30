@@ -11,11 +11,9 @@ import ChangePassword from './auth/components/ChangePassword/ChangePassword'
 import TrailsCreate from './auth/components/CreateComponents/CreateComponents'
 import TrailsRead from './auth/components/ReadComponents/ReadComponents'
 import TrailsUpdate from './auth/components/UpdateComponents/UpdateComponents'
-// import TrailsDelete from './auth/components/DeleteComponents/DeleteComponents'
 import TrailsIndex from './auth/components/IndexComponents/IndexComponents'
 import { trailsIndex } from './auth/api'
 import messages from './auth/messages'
-// import CssBaseline from '@material-ui/core/CssBaseline'
 
 
 class App extends Component {
@@ -35,7 +33,7 @@ class App extends Component {
     trailsIndex(this.state.user)
       .then(res => res.ok ? res : new Error())
       .then(res => res.json())
-      .then(res => res) //console.log(res.trails))
+      .then(res => res) 
       .then(
         res => {
           console.log(res)

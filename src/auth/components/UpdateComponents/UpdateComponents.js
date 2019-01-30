@@ -23,15 +23,12 @@ class TrailsUpdate extends Component {
   }
 
   componentDidMount() {
-    // console.log(this.props.trails)
 
     const firstTrailId = this.props.trails[0]._id
-    // const firstTrailId = this.props.trails[1].id   
     this.changeTrailData(firstTrailId)
   }
 
   changeTrailData = id => {
-    // debugger
     const trail = this.props.trails.find(trail => String(trail._id) === String(id))
     this.setState({
       path: trail.path || '',
@@ -62,10 +59,7 @@ class TrailsUpdate extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault()
-    // debugger
     const data = { ...this.state }
-    // console.log(this.state)
-    // patchTrail(data, this.props.user)
     trailsUpdate(data, this.props.user)
       .then(res => res.ok ? res : new Error())
       .then(() => this.props.flash('Updated that Trail, Good Job', 'flash-success'))
@@ -84,7 +78,6 @@ class TrailsUpdate extends Component {
           <h3>Update Trail</h3> 
         </div>
         <form
-          // className="trail-form"
           className='auth-form-update-components'
           onSubmit={this.handleFormSubmit}>
           <h3>Trails</h3>
