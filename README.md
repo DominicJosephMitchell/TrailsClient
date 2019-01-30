@@ -10,9 +10,6 @@ and
 
 sudo systemctl disable postgresql
 
-Usage Material-UI components work in isolation. They are self-supporting.
-$ npm install @material-ui/core
-
 Run in Terminal:  npm start
 
 README
