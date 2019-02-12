@@ -10,7 +10,7 @@ and
 
 sudo systemctl disable postgresql
 
-Run in Terminal:  npm start
+Run in Terminal:  npm start npm run s
 
 README
 

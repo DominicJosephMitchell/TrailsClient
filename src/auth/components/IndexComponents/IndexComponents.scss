@@ -1,16 +1,16 @@
-@import './DeleteComponentsColor.scss';
+@import './IndexComponentsColor.scss';
 
-.delete-components-container {
-//   background-image: url("./SignIn.jpg");
-  background-size: cover;
-  display: flex;
+.index-components-container {
+  text-align: center;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
   font-family: 'Thasadith', sans-serif;
-  height: 550px;
-  justify-content: space-between;
-  border-radius: 50%;
+  height: 350px;
+  width: 500px;
+  border-radius: 30%;
 }
 
-.delete-components-header {
+.index-components-header {
   margin-left: 6%;
   flex-direction: column;
   font-weight: 600;
@@ -18,14 +18,15 @@
   justify-content: flex-end;
   height: 200px;
   margin-top: 0;
-  color: $white;
+  color:$white;
   border-radius: 5px;
 }
 
-.auth-form-delete-components {
+.auth-form-index-components {
   background-color: rgba(0,0,0,0.6);
   display: flex;
   justify-content: center;
+  align-self: center;
   flex-direction: column;
   height: 400px;
   margin: 5%;
