@@ -72,68 +72,68 @@ export const changePassword = (passwords, user) => {
 // ***************************************************
 // TRAILS: CRUD
 
-export const trailsCreate = ({ path, town, state }, user) => {
-  console.log(path, town, state, user)
-  return fetch(apiUrl + '/trails', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Token token=${user.token}`
-    },
-    body: JSON.stringify({
-      trail: {
-        path: path,
-        town: town,
-        state: state,
-      }
-    })
-  })
-}
+// export const trailsCreate = ({ path, town, state }, user) => {
+//   console.log(path, town, state, user)
+//   return fetch(apiUrl + '/trails', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'Authorization': `Token token=${user.token}`
+//     },
+//     body: JSON.stringify({
+//       trail: {
+//         path: path,
+//         town: town,
+//         state: state,
+//       }
+//     })
+//   })
+// }
 
-export const trailsDelete = (trail, user) => {
-  return fetch(apiUrl + '/trails/' + trail._id, {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Token token=${user.token}`
-    }
-  })
-}
+// export const trailsDelete = (trail, user) => {
+//   return fetch(apiUrl + '/trails/' + trail._id, {
+//     method: 'DELETE',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'Authorization': `Token token=${user.token}`
+//     }
+//   })
+// }
 
 
-export const trailsRead = (user) => {
-  return fetch(apiUrl + '/trails', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Token token=${user.token}`
-    }
-  })
-}
+// export const trailsRead = (user) => {
+//   return fetch(apiUrl + '/trails', {
+//     method: 'GET',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'Authorization': `Token token=${user.token}`
+//     }
+//   })
+// }
 
-export const trailsUpdate = ({ _id, path, town, state }, user) => {
-  return fetch(apiUrl + '/trails/' + _id, {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Token token=${user.token}`
-    },
-    body: JSON.stringify({
-      trail: {
-        path: path,
-        town: town,
-        state: state
-      }
-    })
-  })
-}
+// export const trailsUpdate = ({ _id, path, town, state }, user) => {
+//   return fetch(apiUrl + '/trails/' + _id, {
+//     method: 'PATCH',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'Authorization': `Token token=${user.token}`
+//     },
+//     body: JSON.stringify({
+//       trail: {
+//         path: path,
+//         town: town,
+//         state: state
+//       }
+//     })
+//   })
+// }
 
-export const trailsIndex = (user) => {
-  return fetch(apiUrl + '/trails', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Token token=${user.token}`
-    }
-  })
-}
+// export const trailsIndex = (user) => {
+//   return fetch(apiUrl + '/trails', {
+//     method: 'GET',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'Authorization': `Token token=${user.token}`
+//     }
+//   })
+// }

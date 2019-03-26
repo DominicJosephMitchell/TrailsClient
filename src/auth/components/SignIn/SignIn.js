@@ -42,10 +42,10 @@ class SignIn extends Component {
     return (
       <div className="sign-in-container">
         <div className="sign-in-header">
-          <h4>The Journey Begins!</h4>
+          <h4></h4>
         </div>
         <form className='auth-form-sign-in' onSubmit={this.signIn}>
-          <h4>Sign In</h4>
+          <h4></h4>
           <label htmlFor="email"></label>
           <input
             required
@@ -67,6 +67,8 @@ class SignIn extends Component {
           <button type="submit">Sign In</button>
         </form>
       </div>
+
+      
     )
   }
 }

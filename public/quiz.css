@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    font-size: 2em;
+    padding: 20px;
+    margin: 20px;
+    background-color: olivedrab;
+}
+
+h2 {
+    font-size: 4em;
+    color: purple;
+}
+
+h1 {
+    font-size: 7em;
+    color: red
+}

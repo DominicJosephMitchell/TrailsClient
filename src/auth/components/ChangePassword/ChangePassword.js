@@ -39,7 +39,7 @@ class ChangePassword extends Component {
     return (
       <div className="change-password-container">
         <div className="change-password-header">
-          <h3>Stay Safe LOCK IT UP!</h3>
+          <h3>Password</h3>
         </div>
         <form className='auth-form-change-password' onSubmit={this.changePassword}>
           <h3>Change Password</h3>

@@ -10,13 +10,13 @@ and
 
 sudo systemctl disable postgresql
 
-Run in Terminal:  npm start npm run s
+Run in Terminal:  npm start ( be npm run s)
 
 README
 
 USER STORIES:
 
-RIDER:
+NURSE:
 A rider wants to know how many total miles of the trail.
 A rider wants to know the location of each trail.
 A rider wants to know how difficult the trail is.

@@ -44,11 +44,11 @@ class SignUp extends Component {
     return (
       <div className="sign-up-container">
         <div className="sign-up-header">
-          <h4>We Are Glad You Have Arrived !</h4>
+          <h4></h4>
         </div>
 
         <form className='auth-form-sign-up' onSubmit={this.signUp}>
-          <h4>Sign Up</h4>
+          <h4></h4>
           <label htmlFor="email"></label>
           <input
             required
@@ -76,7 +76,7 @@ class SignUp extends Component {
             placeholder="Confirm Password"
             onChange={this.handleChange}
           />
-          <button type="submit">Sign In</button>
+          <button type="submit">Sign Up</button>
         </form>
       </div>
     )

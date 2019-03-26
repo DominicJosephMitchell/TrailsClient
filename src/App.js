@@ -8,11 +8,11 @@ import SignUp from './auth/components/SignUp/SignUp'
 import SignIn from './auth/components/SignIn/SignIn'
 import SignOut from './auth/components/SignOut/SignOut'
 import ChangePassword from './auth/components/ChangePassword/ChangePassword'
-import TrailsCreate from './auth/components/CreateComponents/CreateComponents'
-import TrailsRead from './auth/components/ReadComponents/ReadComponents'
-import TrailsUpdate from './auth/components/UpdateComponents/UpdateComponents'
-import TrailsIndex from './auth/components/IndexComponents/IndexComponents'
-import { trailsIndex } from './auth/api'
+// import TrailsCreate from './auth/components/CreateComponents/CreateComponents'
+// import TrailsRead from './auth/components/ReadComponents/ReadComponents'
+// import TrailsUpdate from './auth/components/UpdateComponents/UpdateComponents'
+// import TrailsIndex from './auth/components/IndexComponents/IndexComponents'
+// import { trailsIndex } from './auth/api'
 import messages from './auth/messages'
 
 
@@ -83,22 +83,22 @@ class App extends Component {
             <ChangePassword flash={this.flash} user={user} />
           )} />
           
-          {/* CRUD */}
+          {/* CRUD
           <Route user={user} path='/create-components' render={() => (
             <TrailsCreate getAllTrails={this.getAllTrails} flash={this.flash} user={user} />
           )} />
           {/* <Route path='/delete-components' render={() => (
             <TrailsDelete flash={this.flash} user={user} />
           )} /> */}
-          <Route path='/index-components' render={() => (
+          {/* <Route path='/index-components' render={() => (
             <TrailsIndex getAllTrails={this.getAllTrails} trails={this.state.trails} flash={this.flash} user={user} />
-          )} />
-          <Route path='/read-components' render={() => (
+          )} /> */}
+          {/* <Route path='/read-components' render={() => (
             <TrailsRead flash={this.flash} user={user} />
           )} />
           <Route path='/update-components' render={() => (
             <TrailsUpdate trails={this.state.trails} flash={this.flash} user={user} />
-          )} />
+          )} /> */} 
           
         </main>
       </React.Fragment>
